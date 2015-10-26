@@ -7,7 +7,7 @@ echo "Cmd: sudo apt-get -y update"
 echo "***********************************************************************"
 sudo apt-get -y update
 echo "------------------------------- Done ----------------------------------"
-echo "."
+echo "return code: " $?
 
 # Install the Java runtime
 echo "***********************************************************************"
@@ -16,7 +16,7 @@ echo "Cmd: sudo apt-get -y install default-jre"
 echo "***********************************************************************"
 sudo apt-get -y install default-jre
 echo "------------------------------- Done ----------------------------------"
-echo "."
+echo "return code: " $?
 
 
 # Install Tomcat7
@@ -26,7 +26,7 @@ echo "Cmd: sudo apt-get -y install tomcat7"
 echo "***********************************************************************"
 sudo apt-get -y install tomcat7
 echo "------------------------------- Done ----------------------------------"
-echo "."
+echo "return code: " $?
 
 # Copy the path as 1st argument to coffee.war
 #echo "Copying $1 as coffeeshop.war...."
@@ -40,4 +40,4 @@ echo 'Cmd: sudo cp $1 /var/lib/tomcat7/webapps/'
 echo "***********************************************************************"
 sudo cp $1 /var/lib/tomcat7/webapps/
 echo "------------------------------- Done ----------------------------------"
-echo "."
+echo "return code: " $?
