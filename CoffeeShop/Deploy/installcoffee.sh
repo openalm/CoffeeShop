@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # update the apt-get repos
-apt-get -y update
+sudo apt-get -y update
 
 # Install the Java runtime
-apt-get -y install default-jre
+sudo apt-get -y install default-jre
 
 # Install Tomcat7
-apt-get -y install tomcat7
+sudo apt-get -y install tomcat7
 
 # Copy the path as 1st argument to coffee.war
-curl $1 > coffee.war
+sudo curl $1 > coffee.war
 
 # Copy the coffee.war to webapps folder
-cp coffee.war /var/lib/tomcat7/webapps/
+sudo cp coffee.war /var/lib/tomcat7/webapps/
