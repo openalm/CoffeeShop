@@ -11,7 +11,7 @@
 
 # Copy the path as 1st argument to coffee.war
 echo "Copying $1 as coffeeshop.war...."
-sudo cp $1 > coffee.war
+sudo cp $1 coffee.war
 echo "..done !"
 
 # Copy the coffee.war to webapps folder
