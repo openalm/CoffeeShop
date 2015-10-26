@@ -10,6 +10,7 @@
 #sudo apt-get -y install tomcat7
 
 # Copy the path as 1st argument to coffee.war
+echo "1 = $1"
 sudo curl $1 > coffee.war
 
 # Copy the coffee.war to webapps folder
